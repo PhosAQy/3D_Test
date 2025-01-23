@@ -20,17 +20,12 @@ class SolarSystemApp {
         const sceneManager = new SceneManager();
         console.log("sm:", sceneManager)
         const { scene, renderer, camera, controls, stats } = sceneManager.init();
-        // const scene = sceneManager.scene
-        // const renderer = sceneManager.renderer
-        // const camera = sceneManager.camera
-        // const stats = sceneManager.stats
 
         const celestialConfig = configs['celestial']
         console.log(celestialConfig)
         // 创建太阳系
         console.log(scene)
         this.solarSystem = new SolarSystem(scene, celestialConfig);
-        
         // 初始化GUI
         new GuiManager(this.options, celestialConfig);
         

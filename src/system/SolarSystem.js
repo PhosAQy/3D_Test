@@ -18,7 +18,11 @@ export class SolarSystem {
             if (body.type === 'star') {
                 celestial = CelestialFactory.createStar(body)
                 const pointLight = new THREE.PointLight(body.pointLight.color, body.pointLight.intensity);
-                pointLight.position.set(body.position);
+                pointLight.position.set(
+                    body.position.x,
+                    body.position.y,
+                    body.position.z
+                );
                 this.scene.add(pointLight);
             } else {
                 celestial = CelestialFactory.createPlanet(body)

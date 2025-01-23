@@ -46,6 +46,10 @@ export class SceneManager {
         textureLoader.load('./public/textures/space.jpg', (texture) => {
             this.scene.background = texture;
         });
+        
+        //环境光:没有特定方向，整体改变场景的光照明暗
+        const ambient = new THREE.AmbientLight(0xffffff, 0.4);
+        this.scene.add(ambient);
         return {
             scene: this.scene,
             camera: this.camera,
