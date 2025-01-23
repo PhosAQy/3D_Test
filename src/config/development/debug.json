@@ -1,0 +1,6 @@
+{
+    "debug": {
+      "showFPS": true,
+      "collisionVisualization": true
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "scene": {
+        "camera": {
+            "position": [
+                0,
+                1e8,
+                5e8
+            ],
+            "lookAt": [
+                0,
+                0,
+                0
+            ]
+        }
+    },
+    "postProcessing": {
+        "bloom": {
+            "strength": 1.2,
+            "radius": 0.7,
+            "threshold": 0.4
+        }
+    },
+    "background": {
+        "starCount": 500000,
+        "diskRadius": 80000,
+        "dustColor": "#446688",
+        "spiralArms": 4,
+        "rotationSpeed": 0.001
+    },
+    "lighting": {
+        "ambient": 0.4,
+        "galactic": {
+            "color": "#4466cc",
+            "intensity": 0.8,
+            "direction": [
+                0,
+                -1,
+                0.5
+            ]
+        }
+    }
+}

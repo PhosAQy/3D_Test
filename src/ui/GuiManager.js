@@ -20,13 +20,15 @@ export class GuiManager {
 
     _createSpeedControls() {
         const folder = this.gui.addFolder('速度控制');
+        const rotationFolder = folder.addFolder('自转速度');
+        const revolutionFolder = folder.addFolder('公转速度');
         for (const key in this.celestialBodies) {
             if (this.celestialBodies.hasOwnProperty(key)) { // 避免遍历到原型链上的属性
                 const celestialBody = this.celestialBodies[key];
         // 添加其他行星控制...
-                folder.add(celestialBody, 'rotationSpeed', -0.01, 0.01).name(celestialBody.name + '自转');
+                rotationFolder.add(celestialBody, 'rotationSpeed', -0.01, 0.01).name(celestialBody.name + '自转');
                 if (celestialBody.revolutionSpeed) {
-                    folder.add(celestialBody, 'revolutionSpeed', -0.1, 0.1).name(celestialBody.name + '公转');
+                    revolutionFolder.add(celestialBody, 'revolutionSpeed', -0.1, 0.1).name(celestialBody.name + '公转');
                 }
             }
         }
