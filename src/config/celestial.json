@@ -1,0 +1,32 @@
+{
+    "sun": {
+        "name": "太阳",
+        "type": "star",
+        "radius": 50,
+        "texture": "./public/textures/sun.jpg",
+        "rotationSpeed": 0.004,
+        "pointLight": {
+            "color": "white",
+            "intensity": 2
+        },
+        "position": { "x": 0, "y": 0, "z": 0 }
+    },
+    "mercury": {
+        "name": "水星",
+        "type": "planet",
+        "radius": 3.8,
+        "texture": "./public/textures/mercury.jpg",
+        "distance": 80,
+        "rotationSpeed": 0.004,
+        "revolutionSpeed": 0.047
+    },
+    "venus": {
+        "name": "金星",
+        "type": "planet",
+        "radius": 9.5,
+        "texture": "./public/textures/venus.jpg",
+        "distance": 120,
+        "rotationSpeed": 0.002,
+        "revolutionSpeed": 0.035
+    }
+}

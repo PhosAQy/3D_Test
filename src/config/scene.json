@@ -1,0 +1,5 @@
+{
+    "backgroundColor": "0x000000",
+    "cameraPosition": { "x": 0, "y": 200, "z": 300 },
+    "ambientLight": "0x333333"
+}
