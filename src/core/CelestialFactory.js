@@ -11,11 +11,7 @@ export class CelestialFactory {
         const { geometry, texture } = this.createBaseBody(params);
         const material = new THREE.MeshBasicMaterial({ map: texture });
         const star = new THREE.Mesh(geometry, material);
-        star.position.set(
-            params.position.x,
-            params.position.y,
-            params.position.z
-        );
+        star.position.fromArray(params.position);
         this._addStarGlow(star, params);
         return star;
     }
@@ -25,6 +21,10 @@ export class CelestialFactory {
         const material = new THREE.MeshLambertMaterial({ map: texture });
         const planet = new THREE.Mesh(geometry, material);
         planet.position.x = params.distance;
+            // 设置自转轴倾斜（绕 X 轴旋转）
+        if (typeof params.axialTilt !== 'undefined') {
+            planet.rotation.x = THREE.MathUtils.degToRad(params.axialTilt);
+        }
         return planet;
     }
 

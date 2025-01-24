@@ -9,24 +9,115 @@
             "color": "white",
             "intensity": 2
         },
-        "position": { "x": 0, "y": 0, "z": 0 }
+        "position": [0, 0, 0]
     },
     "mercury": {
         "name": "水星",
         "type": "planet",
         "radius": 3.8,
         "texture": "./public/textures/mercury.jpg",
-        "distance": 80,
+        "orbit": {
+            "semiMajorAxis": 80,     
+            "eccentricity": 0.2056   
+        },
         "rotationSpeed": 0.004,
-        "revolutionSpeed": 0.047
+        "revolutionSpeed": 0.047,
+        "axialTilt": 0.034
     },
     "venus": {
         "name": "金星",
         "type": "planet",
         "radius": 9.5,
         "texture": "./public/textures/venus.jpg",
-        "distance": 120,
-        "rotationSpeed": 0.002,
-        "revolutionSpeed": 0.035
+        "orbit": {
+            "semiMajorAxis": 120,
+            "eccentricity": 0.0068  
+        },
+        "rotationSpeed": -0.002,
+        "revolutionSpeed": 0.035,
+        "axialTilt": 177.4
+    },
+    "earth": {
+        "name": "地球",
+        "type": "planet",
+        "radius": 10,
+        "texture": "./public/textures/earth.jpg",
+        "orbit": {
+            "semiMajorAxis": 160,
+            "eccentricity": 0.0167 
+        },
+        "rotationSpeed": 0.005,
+        "revolutionSpeed": 0.029,
+        "axialTilt": 23.44
+    },
+    "mars": {
+        "name": "火星",
+        "type": "planet",
+        "radius": 5.3,
+        "texture": "./public/textures/mars.jpg",
+        "orbit": {
+            "semiMajorAxis": 200,
+            "eccentricity": 0.0934  
+        },
+        "rotationSpeed": 0.003,
+        "revolutionSpeed": 0.024,
+        "axialTilt": 25.2
+    },
+    "jupiter": {
+        "name": "木星",
+        "type": "planet",
+        "radius": 35,
+        "texture": "./public/textures/jupiter.jpg",
+        "orbit": {
+            "semiMajorAxis": 280,
+            "eccentricity": 0.0489
+        },
+        "rotationSpeed": 0.008,
+        "revolutionSpeed": 0.013,
+        "axialTilt": 3.1
+    },
+    "saturn": {
+        "name": "土星",
+        "type": "planet",
+        "radius": 30,
+        "texture": "./public/textures/saturn.jpg",
+        "orbit": {
+            "semiMajorAxis": 340,
+            "eccentricity": 0.0565
+        },
+        "rotationSpeed": 0.007,
+        "revolutionSpeed": 0.009,
+        "axialTilt": 26.7,
+        "ring": {
+            "innerRadius": 40,
+            "outerRadius": 60,
+            "texture": "./public/textures/saturn_ring.jpg"
+        }
+    },
+    "uranus": {
+        "name": "天王星",
+        "type": "planet",
+        "radius": 25,
+        "texture": "./public/textures/uranus.jpg",
+        "orbit": {
+            "semiMajorAxis": 380,
+            "eccentricity": 0.0463
+        },
+        "rotationSpeed": 0.006,
+        "revolutionSpeed": 0.006,
+        "axialTilt": 97.8
+    },
+    "neptune": {
+        "name": "海王星",
+        "type": "planet",
+        "radius": 24,
+        "texture": "./public/textures/neptune.jpg",
+        "orbit": {
+            "semiMajorAxis": 420,
+            "eccentricity": 0.0086 
+        },
+        "rotationSpeed": 0.005,
+        "revolutionSpeed": 0.004,
+        "axialTilt": 28.3
     }
 }
